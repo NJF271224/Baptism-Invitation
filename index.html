@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baptism Invitation</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .nav-toggle {
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+        z-index: 1001;
+        background: #f8c8dc;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-toggle span {
+        font-size: 2rem;
+        color: #fff;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.08);
+        transition: right 0.3s;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+      }
+      nav.open {
+        right: 0;
+      }
+      /* Style for all anchor tags by default */
+      a {
+        color: #f8c8dc;
+        text-decoration: none;
+        transition: color 0.18s, background 0.18s;
+      }
+
+      /* Navigation links */
+      nav a {
+        padding: 1.2rem 2rem;
+        color: #f8c8dc;
+        text-decoration: none;
+        font-family: "Quicksand", "Segoe UI", Arial, sans-serif;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #f8c8dc22;
+        transition: background 0.2s, color 0.2s;
+        display: block;
+      }
+      nav a:hover,
+      nav a:focus {
+        background: #f8c8dc;
+        color: #fff;
+        outline: none;
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          width: 100vw;
+        }
+      }
+      .locations-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .location-card {
+        background: linear-gradient(120deg, #fff 70%, #f8c8dc 100%);
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(248, 200, 220, 0.13),
+          0 1.5px 8px rgba(214, 239, 214, 0.1);
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        outline: none;
+        transition: box-shadow 0.25s, transform 0.22s, border 0.22s,
+          filter 0.18s;
+        border: 2px solid #f8c8dc33;
+        width: 220px;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem 1.2rem 1rem;
+        position: relative;
+        cursor: pointer;
+      }
+      .location-card:focus {
+        outline: 2.5px solid #a7c7b7;
+        outline-offset: 2px;
+        filter: brightness(0.97) drop-shadow(0 0 6px #f8c8dc88);
+      }
+      .location-card:active {
+        filter: brightness(0.93);
+        transform: scale(0.98);
+      }
+      .location-card:hover {
+        box-shadow: 0 8px 32px rgba(248, 200, 220, 0.18),
+          0 3px 16px rgba(214, 239, 214, 0.15);
+        transform: translateY(-6px) scale(1.04);
+        border-color: #f8c8dc88;
+        background: linear-gradient(120deg, #fff 60%, #f8c8dc 100%);
+      }
+
+      /* Location link as a button */
+      .location-link {
+        font-size: 1rem;
+        color: #fff;
+        background: linear-gradient(90deg, #f8c8dc 60%, #a7c7b7 100%);
+        padding: 0.4rem 1.2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        box-shadow: 0 1px 6px #f8c8dc22;
+        transition: background 0.18s, color 0.18s;
+        display: inline-block;
+        margin-top: 0.7rem;
+        cursor: pointer;
+        border: none;
+      }
+      .location-card:hover .location-link,
+      .location-link:focus {
+        background: linear-gradient(90deg, #a7c7b7 60%, #f8c8dc 100%);
+        color: #222;
+        outline: none;
+      }
+      .location-link:active {
+        background: linear-gradient(90deg, #f8c8dc 80%, #a7c7b7 100%);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="about" class="about-bg">
+      <h2>About Me</h2>
+      <p>
+        <b>✨تعرفوا عَ نور 🌟</b><br /><br />
+        <b>!نور خلقت بـ27 كانون الأول 2024، وسكّرت السنة على ذوقها</b
+        ><br /><br />
+        <b
+          >."أوّل ما وصلت، فتحت عيونها وقالت: "مين هون المسؤول؟ صار في تغيير
+          إدارة</b
+        ><br /><br />
+        <b
+          >تصحى عالساعة يلي هي بدها، بتاكل بس لما يجي مزاجها، وبتصرّف كأنو كل شي
+          ملكها (وهو فعليًا هيك 💗)</b
+        ><br /><br />
+        <b
+          >حفاضها أهم من أي اجتماع، ونومتها بتقرر مصير نهارك. بس والله، ضحكتها
+          بتمحي تعب العمر</b
+        ><br /><br />
+      </p>
+      <p><b>:معلومة سريعة</b></p>
+      <ul>
+        <li><b>ما بتدفع أجار، بس مالكة قلب الكل… وغرف البيت كمان</b></li>
+        <li><b>🌸 نور: صغيرة بالحجم، كبيرة بالتأثير </b></li>
+      </ul>
+    </section>
+    <img src="./Image1.jpeg" alt="" class="images" />
+    <section id="age" class="age-bg">
+      <h2>Today I am</h2>
+      <div
+        id="age-countup"
+        style="font-size: 1.3rem; margin-top: 1.2rem; color: #a7c7b7"
+      >
+        <!-- Age will appear here -->
+      </div>
+    </section>
+    <img src="./Invitation.jpeg" alt="Baptism Invitation" class="images" />
+    <section id="countdown" class="countdown-bg">
+      <div class="section-inner">
+        <div class="section-front"></div>
+        <div class="section-back">
+          <h2>Counting Down!</h2>
+          <div id="days-left"><!-- Countdown will appear here --></div>
+        </div>
+      </div>
+    </section>
+    <img src="./Image7.jpeg" alt="" class="images" />
+    <section id="location" class="location-bg">
+      <h2>Locations</h2>
+      <div class="locations-container">
+        <a
+          href="https://maps.app.goo.gl/34DVYxD3ycXsNdzZ8?g_st=aw"
+          target="_blank"
+          class="location-card location-card1"
+          aria-label="Open Location 1 in Google Maps"
+        >
+          <span class="location-icon">📍</span>
+          <div class="location-title">Les Tziganes Restaurant</div>
+          <div class="location-link">View on Google Maps</div>
+        </a>
+        <a
+          href="https://maps.app.goo.gl/U4inoehKxajKawNNA?g_st=aw"
+          target="_blank"
+          class="location-card location-card2"
+          aria-label="Open Location 2 in Google Maps"
+        >
+          <span class="location-icon">📍</span>
+          <div class="location-title">Church El Bouwebe</div>
+          <div class="location-link">View on Google Maps</div>
+        </a>
+      </div>
+    </section>
+    <img src="./Image6.jpeg" alt="" class="images" />
+    <section id="calendar" class="calendar-bg">
+      <div class="section-inner">
+        <div class="section-front"></div>
+        <div class="section-back">
+          <h2>To remember!</h2>
+          <br />
+          <a
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nour+Baptism&dates=20250719T120000/20250719T130000&details=Join+us+for+Nour%27s+baptism%21&location=Les+Tziganes+Restaurant+and+Church+El+Bouwebe"
+            target="_blank"
+            rel="noopener"
+            id="add-calendar-btn"
+            class="button"
+            >Add to Google Calendar</a
+          >
+        </div>
+      </div>
+    </section>
+    <img src="./Image9.jpeg" alt="" class="images" />
+    <section id="godparents" class="godparents-bg">
+      <div class="section-inner">
+        <div class="section-front"></div>
+        <div class="section-back">
+          <h2>My Godparents</h2>
+          <div>
+            My Godmother: <span id="godmother">Auntie Missa</span><br />
+            <img src="./God Mother.jpeg" alt="Godmother Missa" /><br />
+            My Godfather: <span id="godfather">Uncle Antonios</span><br />
+            <img src="./God Father.jpeg" alt="Godfather Antonios" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const targetDate = new Date("2025-07-19T00:00:00");
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          document.getElementById("days-left").innerHTML =
+            "<b>The day has arrived!</b>";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById(
+          "days-left"
+        ).innerHTML = `<b>${days}</b> days, <b>${hours}</b> hours, <b>${minutes}</b> minutes, <b>${seconds}</b> seconds left!`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      function updateAgeCountup() {
+        const birthDate = new Date("2024-12-27T00:00:00");
+        const now = new Date();
+        let years = now.getFullYear() - birthDate.getFullYear();
+        let months = now.getMonth() - birthDate.getMonth();
+        let days = now.getDate() - birthDate.getDate();
+
+        if (days < 0) {
+          months -= 1;
+          const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+          days += prevMonth.getDate();
+        }
+        if (months < 0) {
+          years -= 1;
+          months += 12;
+        }
+
+        document.getElementById(
+          "age-countup"
+        ).innerHTML = `<b>${years}</b> years, <b>${months}</b> months, <b>${days}</b> days old`;
+      }
+      updateAgeCountup();
+      setInterval(updateAgeCountup, 60 * 60 * 1000); // Update every hour
+    </script>
+  </body>
+</html>
